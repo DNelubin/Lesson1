@@ -2,17 +2,17 @@
 {
     static void Main()
     {
-        int[] numbers = { 1, 5, 10, 20, 30, 40, 99, 4, 90, 3 };
+        int[] array = { 2, 5, 2, 3, 6, 3, 7, 8, 2, 4 };
         int count = 0;
 
-        foreach (int number in numbers)
+        foreach (int num in array)
         {
-            if (number >= 10 && number <= 90)
+            if (num % 2 == 0)
             {
                 count++;
             }
         }
 
-        Console.WriteLine($"Количество элементов массива, значения которых лежат в отрезке [10, 90]: {count}");
+        Console.WriteLine($"Количество четных чисел в массиве: {count}");
     }
 }
