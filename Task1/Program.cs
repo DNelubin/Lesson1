@@ -2,17 +2,25 @@
 {
     static void Main()
     {
-        int[] array = { 2, 5, 2, 3, 6, 3, 7, 8, 2, 4 };
-        int count = 0;
+        double[] array = { 0.25, 5.4, 1.3, 2.1, 3.8, 5.2, 3.01 };
+        
+        double maxNum = array[0];
+        double minNum = array[0];
 
-        foreach (int num in array)
+        foreach (double num in array)
         {
-            if (num % 2 == 0)
+            if (num > maxNum)
             {
-                count++;
+                maxNum = num;
+            }
+            if (num < minNum)
+            {
+                minNum = num;
             }
         }
 
-        Console.WriteLine($"Количество четных чисел в массиве: {count}");
+        double diff = maxNum - minNum;
+        
+        Console.WriteLine($"Разница между максимальным и минимальным элементами массива: {diff}");
     }
 }
