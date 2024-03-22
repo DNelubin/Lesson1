@@ -1,17 +1,15 @@
-﻿class Answer {
-    static void CheckIfEven(int number)
+﻿using System;
+
+public class Answer {
+    static void PrintEvenNumbers(int number)
     {
       // Введите свое решение ниже
- if (number % 2 == 0)
+for (int i = 2; i <= number; i += 2)
         {
-            Console.WriteLine("четное");
-        }
-        else
-        {
-            Console.WriteLine("нечетное");
+            Console.Write(i + " ");
         }
     }
-  
+
 
   // Не удаляйте и не меняйте метод Main! 
     static public void Main(string[] args) {
@@ -21,10 +19,10 @@
             number = int.Parse(args[0]);
         } else {
            // Здесь вы можете поменять значения для отправки кода на Выполнение
-            number = 6;
+            number = 5;
         }
 
         // Не удаляйте строки ниже
-        CheckIfEven(number);
+        PrintEvenNumbers(number);
     }
 }
