@@ -1,24 +1,8 @@
-﻿// Напишите программу, которая на вход принимает два целых числа и проверяет является ли первое число квадратом второго
+﻿// Вывести трехзначные числа с суммой последних двух каждого из них
 
-Console.Write("Введите первое число:");
-int namber1 = Convert.ToInt32 (Console.ReadLine());
-Console.Write("Введите второе число: ");
-int namber2 = Convert.ToInt32 (Console.ReadLine());
-
-if(namber1 == namber2 * namber2)
-{
-    Console.WriteLine($"Квадрат числа {namber2} равен {namber1}");
-}
-else Console.WriteLine("Квадрат числа {0} не равен {1}", namber2, namber1);
-
-
-//Введите команду которая принимает целое число N, а на выходе показывает целые числа в промежутке
-
-int N = Convert.ToInt32(Console.ReadLine());
-int notN = -N;
-
-while (notN <= N)
-{
-    Console.Write($"{notN} ");
-    notN++;
-}
+int n=Convert.ToInt32(Console.ReadLine());
+int fist = n%10;
+int second = n/10%10;
+int thri = n/100;
+int sum = fist + thri;
+Console.WriteLine(sum);
