@@ -1,8 +1,13 @@
 ﻿// Вывести трехзначные числа с суммой последних двух каждого из них
 
-int n=Convert.ToInt32(Console.ReadLine());
-int fist = n%10;
-int second = n/10%10;
-int thri = n/100;
-int sum = fist + thri;
-Console.WriteLine(sum);
+Console.WriteLine(" выведи трехзначное число: ");
+string n = Console.ReadLine()!;
+
+if (n.Length != 3)
+{
+    Console.Write("это не трехзначное число...");
+}
+else
+{
+    Console.WriteLine(Convert.ToInt32(Convert.ToString(n[0])) + Convert.ToInt32(Convert.ToString(n[2])));
+}
