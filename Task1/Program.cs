@@ -1,26 +1,12 @@
-﻿class Program
+﻿// Напишите программу, которая на вход принимает два целых числа и проверяет является ли первое число квадратом второго
+
+Console.Write("Введите первое число:");
+int namber1 = Convert.ToInt32 (Console.ReadLine());
+Console.Write("Введите второе число: ");
+int namber2 = Convert.ToInt32 (Console.ReadLine());
+
+if(namber1 == namber2 * namber2)
 {
-    static void Main()
-    {
-        double[] array = { 0.25, 5.4, 1.3, 2.1, 3.8, 5.2, 3.01 };
-        
-        double maxNum = array[0];
-        double minNum = array[0];
-
-        foreach (double num in array)
-        {
-            if (num > maxNum)
-            {
-                maxNum = num;
-            }
-            if (num < minNum)
-            {
-                minNum = num;
-            }
-        }
-
-        double diff = maxNum - minNum;
-        
-        Console.WriteLine($"Разница между максимальным и минимальным элементами массива: {diff}");
-    }
+    Console.Write($"Квадрат числа {namber2} равен {namber1}");
 }
+else Console.Write("Квадрат числа {0} не равен {1}", namber2, namber1);
