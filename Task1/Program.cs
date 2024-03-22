@@ -12,5 +12,13 @@ if(namber1 == namber2 * namber2)
 else Console.WriteLine("Квадрат числа {0} не равен {1}", namber2, namber1);
 
 
-string namber3 = Convert.ToString(Convert.ToInt32 (Console.ReadLine()));
-Console.WriteLine(namber3);
+//Введите команду которая принимает целое число N, а на выходе показывает целые числа в промежутке
+
+int N = Convert.ToInt32(Console.ReadLine());
+int notN = -N;
+
+while (notN <= N)
+{
+    Console.Write($"{notN} ");
+    notN++;
+}
