@@ -2,16 +2,31 @@
 {
     public static void Main()
     {
-        Console.WriteLine("Введите число:");
-        int number = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Введите координату X:");
+        int x = Convert.ToInt32(Console.ReadLine());
 
-        if (number % 7 == 0 && number % 23 == 0)
+        Console.WriteLine("Введите координату Y:");
+        int y = Convert.ToInt32(Console.ReadLine());
+
+        if (x > 0 && y > 0)
         {
-            Console.WriteLine($"Число {number} кратно одновременно 7 и 23");
+            Console.WriteLine("Точка находится в первой координатной четверти");
+        }
+        else if (x < 0 && y > 0)
+        {
+            Console.WriteLine("Точка находится во второй координатной четверти");
+        }
+        else if (x < 0 && y < 0)
+        {
+            Console.WriteLine("Точка находится в третьей координатной четверти");
+        }
+        else if (x > 0 && y < 0)
+        {
+            Console.WriteLine("Точка находится в четвертой координатной четверти");
         }
         else
         {
-            Console.WriteLine($"Число {number} не кратно одновременно 7 и 23");
+            Console.WriteLine("Точка не может находиться на координатной оси");
         }
     }
 }
