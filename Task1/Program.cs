@@ -1,4 +1,6 @@
-﻿public class Program
+﻿//Задание 2. Срок сдачи - 25.03.2025
+
+public class Program
 {
     public static void Main()
     {
